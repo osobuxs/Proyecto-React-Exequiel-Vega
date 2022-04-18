@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  function hundleClick(){
-    console.log('click!')
-  }
+//   function hundleClick(){
+//     console.log('click!')
+//   }
 
   return (
     <div className="App">
@@ -24,7 +25,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={hundleClick}>Click Me!</button>
+        {/* <button onClick={hundleClick}>Click Me!</button> */}
       </header>
     </div>
   );
