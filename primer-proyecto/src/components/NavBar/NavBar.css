@@ -1,0 +1,27 @@
+.nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(236, 150, 78);
+    color: red; 
+}
+.titulo{
+    color: red;
+    background-color: black;
+    font-size: 25px
+
+}
+
+.nav li a {
+    padding: 10px;
+    color:Black;
+}
+
+.nav a:hover{
+    color: blue;
+}
+.titulo a:hover{
+    color: blue;
+}
