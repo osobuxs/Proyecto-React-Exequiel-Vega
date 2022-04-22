@@ -2,17 +2,16 @@ import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "./components/Button";
 import Box from "./components/Box";
 import ItemListContainer from "./components/ItemListContainer";
-import CartWidget from "./components/CartWidget";
+
 
 function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
       
-      <Box titulo="">
+      <Box titulo="Bienvenido">
         <ItemListContainer greetings="Proximamente: Catalogo!" />
       </Box>
       {/* <Button texto='Boton' color='green'>

@@ -1,8 +1,8 @@
 import React from 'react'
-
+import CartImg from '../../assets/carrito.png'
 const CartWidget = () => {
   return (
-    <img src="https://cdn-icons-png.flaticon.com/512/3394/3394009.png" width="30" height="30" alt="carrito" />
+    <img src={CartImg} width="30" height="30" alt="carrito" />
   )
 }
 
