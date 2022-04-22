@@ -9,12 +9,14 @@ import {
   FormControl,
   Button
 } from "react-bootstrap";
+import CartWidget from '../CartWidget';
 
 function NavBar(props) {
   return (
+    <>
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">MARKETPLACE</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -22,10 +24,11 @@ function NavBar(props) {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <Nav.Link href="#action1" className="margenL">Catalogo</Nav.Link>
+            <Nav.Link href="#action2">Contacto</Nav.Link>
+            <Nav.Link href="#action3"><CartWidget></CartWidget></Nav.Link>
+            {/* <NavDropdown title="L" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Carrito</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
               </NavDropdown.Item>
@@ -33,23 +36,27 @@ function NavBar(props) {
               <NavDropdown.Item href="#action5">
                 Something else here
               </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
+            </NavDropdown> */}
+            {/* <Nav.Link href="#" disabled>
+              Mayoristas
+            </Nav.Link> */}
           </Nav>
+          
           <Form className="d-flex">
             <FormControl
               type="search"
-              placeholder="Search"
+              placeholder="Busque su producto"
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success">Buscar</Button>
           </Form>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
+    </>
   );
 }
 
