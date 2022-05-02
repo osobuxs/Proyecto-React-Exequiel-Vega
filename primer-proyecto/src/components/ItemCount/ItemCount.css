@@ -1,15 +1,12 @@
 .item-count-container {
-    width: 25%;
+    
     background-color: whitesmoke;
-    padding: 20px;
+    padding: 4px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    
 }
-.item-count-container2 {
-    display: flex;
-    justify-content: center;
-} 
 
 .item-count-container div {
     display: flex;
@@ -32,6 +29,7 @@
 
 .item-count-container div input {
     padding: 5px;
+    width: 200%;
     text-align: center;
 }
 

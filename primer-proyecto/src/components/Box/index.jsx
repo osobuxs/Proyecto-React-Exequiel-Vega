@@ -1,15 +1,15 @@
-import React from 'react'
-import "./Box.css"
+import React from "react";
+import "./Box.css";
 
-const Box = ({titulo, children}) => {
+const Box = ({ titulo, children }) => {
   return (
     <>
-    <div className="box">
-       {titulo}
-       {children}
-       </div>
+      <div className="box">
+        {titulo}
+        {children}
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Box;
