@@ -2,6 +2,7 @@ import React from "react";
 import "./Item.css";
 import ItemCount from "../ItemCount/ItemCount";
 
+
 function onAdd() {
   console.log("dummy");
 }
@@ -19,6 +20,7 @@ function Item({ item }) {
           />
         </div>
       </div>
+      
       <div className="footer">
         {item?.price} <br />
         Stock disponible: {item?.stock}

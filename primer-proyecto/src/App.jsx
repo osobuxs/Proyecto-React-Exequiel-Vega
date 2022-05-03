@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Box from "./components/Box";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemCount from "./components/ItemCount/ItemCount";
+
 
 // function onAdd(product, count){
 //   if (product.stock >= count){
@@ -14,9 +14,9 @@ import ItemCount from "./components/ItemCount/ItemCount";
 //   }
 
 // }
-function onAdd() {
-  console.log("dummy");
-}
+// function onAdd() {
+//   console.log("dummy");
+// }
 
 function App() {
   return (
