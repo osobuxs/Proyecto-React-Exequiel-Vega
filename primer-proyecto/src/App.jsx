@@ -3,6 +3,9 @@ import NavBar from "./components/NavBar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Box from "./components/Box";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetail from "./components/ItemDetail/ItemDetail";
+import axios from "axios";
+import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
 
 
 // function onAdd(product, count){
@@ -24,7 +27,9 @@ function App() {
       <NavBar />
       <Box titulo="Bienvenido">
         <ItemListContainer />
+        
       </Box>
+      <ItemDetailContainer/>
     </div>
   );
 }
