@@ -30,7 +30,7 @@ const Box = ({ titulo, children }) => {
         </div>
         <div>
           <section>
-            <h3>Historia:</h3>
+            <h3 className="rojo">Historia:</h3>
           </section>
           <p>
             La formación actual cuenta con el vocalista Axl Rose, el guitarrista

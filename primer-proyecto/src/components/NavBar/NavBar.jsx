@@ -7,8 +7,8 @@ import GNR from "../../assets/pp.png";
 function NavBar(props) {
   return (
     <div className="nav-container estilo">
-      <Link to="/inicio">
-        <img className="estilo" src={GNR} alt="OMG Comics" />
+      <Link to="/">
+        <img className="estilo" src={GNR} alt="Logo Gnr" />
       </Link>
       <ul className="nav">
         <li>
