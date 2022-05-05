@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/catalogo" element={<ItemListContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="/inicio" element={<Box titulo="Hola" />} />
+        <Route path="/" element={<Box/>} />
       </Routes>
     </div>
   );

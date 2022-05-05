@@ -2,19 +2,18 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget";
 import "./NavBar.css";
-import { NavDropdown } from "react-bootstrap";
 import GNR from "../../assets/GNR-LOGO.jpg";
 
 function NavBar(props) {
   return (
     <div className="nav-container">
-      <Link to="/inicio">
-        <img src={GNR} alt="OMG Comics" />
+      <Link to="/">
+        <img src={GNR} alt="GNR IMAGEN" />
       </Link>
       <ul className="nav">
         <li>
           <NavLink
-            to="/"
+            to="/catalogo"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
             Catalogo
