@@ -1,4 +1,12 @@
-.box{
-    background-color: lightblue;
-    height: 600px;
+.div {
+  padding-left: 20px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  grid-column-gap: 20px;
+  background-color: lightblue;
+}
+.lista {
+  display: inline-block;
+  list-style-type: disc;
 }

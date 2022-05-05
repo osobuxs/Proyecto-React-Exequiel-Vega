@@ -1,38 +1,67 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 // import ItemCount from '../ItemCount/ItemCount';
-import ItemList from '../../components/ItemList/ItemList';
-import './ItemListContainer.css'
+import ItemList from "../../components/ItemList/ItemList";
+import "./ItemListContainer.css";
+import ApForDestr from "../../assets/GNR.jpg";
+import UsYourIlu from "../../assets/use_your_ilussion.webp";
+import Lies from "../../assets/Lies.jpg";
+import SpagInc from "../../assets/spaghetti_incident.jpg";
+import ChinDem from "../../assets/Chinese.webp";
 
 function getProducts(category) {
   const myPromise = new Promise((resolve, reject) => {
     const productsList = [
       {
         id: 1,
-        title: 'Batman',
-        price: '$450',
-        stock: 5,
-        category: 'superheroes',
-        imageUrl: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/184/069/products/batman80anivol191-5a4d6411b2ef55dd1315908772450482-480-0.jpg'
+        title: "Appetite for destruction",
+        price: "$5000",
+        imageUrl: ApForDestr,
+        stock: 10,
+        category: "HardRock",
+        detail: "Primer album de estudio, grabado en el año 1987",
       },
       {
         id: 2,
-        title: 'Superman',
-        price: '$600',
-        stock: 5,
-        category: 'superheroes',
-        imageUrl: 'https://www.ecccomics.com/content/productos/10036/Superman_109_30_1a_cubierta_CORR.jpg'
+        title: "Lies",
+        price: "$3500",
+        imageUrl: Lies,
+        stock: 2,
+        category: "HardRock",
+        detail: "Segundo album de estudio, grabado en el año 1989",
       },
       {
         id: 3,
-        title: 'Flash',
-        price: '$350',
+        title: "Use Your Illusion 1 y 2",
+        price: "$7500",
+        imageUrl: UsYourIlu,
         stock: 5,
-        category: 'superheroes',
-        imageUrl: 'https://www.ecccomics.com/content/productos/5447/Flash_28.jpg'
-      }
+        category: "SoftRock",
+        detail:
+          "Tercer album de estudio en formato doble, grabado en el año 1991",
+      },
+      {
+        id: 4,
+        title: "Spaghetti incident",
+        price: "$4000",
+        imageUrl: SpagInc,
+        stock: 7,
+        category: "SoftRock",
+        detail: "Cuarto album de estudio, grabado en el año 1993",
+      },
+      {
+        id: 5,
+        title: "Chinesse Democracy",
+        price: "$4000",
+        imageUrl: ChinDem,
+        stock: 11,
+        category: "HardRock",
+        detail: "Quinto album de estudio, grabado en el año 2002",
+      },
     ];
-    const productsFiltered = category ? productsList.filter(p => p.category === category) : productsList;
+    const productsFiltered = category
+      ? productsList.filter((p) => p.category === category)
+      : productsList;
     setTimeout(() => {
       resolve(productsFiltered);
     }, 2000);
@@ -49,20 +78,20 @@ function ItemListContainer({ greeting }) {
 
   useEffect(() => {
     getProducts(categoryId)
-      .then(res => {
+      .then((res) => {
         setProducts(res);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
-        alert('Ocurrio un error, revisar la consola!');
+        alert("Ocurrio un error, revisar la consola!");
       });
   }, [categoryId]);
 
   return (
-    <div className='list-item-container'>
+    <div className="list-item-container">
       <ItemList items={products} />
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

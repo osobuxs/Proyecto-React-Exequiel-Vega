@@ -1,63 +1,44 @@
 import React from "react";
-import "./NavBar.css";
-import {
-  Navbar,
-  Container,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget";
+import "./NavBar.css";
+import { NavDropdown } from "react-bootstrap";
+import GNR from "../../assets/GNR-LOGO.jpg";
 
 function NavBar(props) {
   return (
-    <>
-      <Navbar bg="light" expand="lg">
-        <Container fluid>
-          <Navbar.Brand href="#">MARKETPLACE</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Nav.Link href="#action1" className="margenL">
-                Catalogo
-              </Nav.Link>
-              <Nav.Link href="#action2">Contacto</Nav.Link>
-              <Nav.Link href="#action3">
-                <CartWidget></CartWidget>
-              </Nav.Link>
-              {/* <NavDropdown title="L" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Carrito</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown> */}
-              {/* <Nav.Link href="#" disabled>
-              Mayoristas
-            </Nav.Link> */}
-            </Nav>
-
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Busque su producto"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Buscar</Button>
-            </Form>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+    <div className="nav-container">
+      <Link to="/inicio">
+        <img src={GNR} alt="OMG Comics" />
+      </Link>
+      <ul className="nav">
+        <li>
+          <NavLink
+            to="/"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            Catalogo
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/category/SoftRock"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            Soft Rock
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/category/HardRock"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            Hard Rock
+          </NavLink>
+        </li>
+      </ul>
+      <CartWidget />
+    </div>
   );
 }
 
