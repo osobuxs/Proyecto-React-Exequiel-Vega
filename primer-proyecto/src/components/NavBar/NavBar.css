@@ -43,3 +43,8 @@ img {
   width: fit-content;
   height: 100px;
 }
+.estilo{
+    font-size: xx-large;
+    color: RED;
+    font-weight: bolder;
+}

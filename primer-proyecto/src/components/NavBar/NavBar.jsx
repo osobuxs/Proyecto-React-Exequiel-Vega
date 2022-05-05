@@ -2,14 +2,13 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget";
 import "./NavBar.css";
-import { NavDropdown } from "react-bootstrap";
-import GNR from "../../assets/GNR-LOGO.jpg";
+import GNR from "../../assets/pp.png";
 
 function NavBar(props) {
   return (
-    <div className="nav-container">
+    <div className="nav-container estilo">
       <Link to="/inicio">
-        <img src={GNR} alt="OMG Comics" />
+        <img className="estilo" src={GNR} alt="OMG Comics" />
       </Link>
       <ul className="nav">
         <li>
