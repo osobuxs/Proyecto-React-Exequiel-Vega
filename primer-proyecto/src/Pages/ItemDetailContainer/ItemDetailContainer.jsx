@@ -59,9 +59,9 @@ function getItem(id) {
       },
     ];
     const item = productsList.filter((item) => item.id === parseInt(id));
-    setTimeout(() => {
+    
       resolve(item[0]);
-    }, 2000);
+    
   });
   return myPromise;
 }

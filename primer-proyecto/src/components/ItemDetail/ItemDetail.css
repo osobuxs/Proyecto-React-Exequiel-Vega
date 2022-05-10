@@ -58,3 +58,8 @@
 .count-container {
   width: 50%;
 }
+.count-container a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+} 

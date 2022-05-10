@@ -62,10 +62,8 @@ function getProducts(category) {
     const productsFiltered = category
       ? productsList.filter((p) => p.category === category)
       : productsList;
-    setTimeout(() => {
       resolve(productsFiltered);
-    }, 2000);
-  });
+    });
   return myPromise;
 }
 
