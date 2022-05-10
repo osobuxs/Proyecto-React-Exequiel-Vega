@@ -59,9 +59,8 @@ function getItem(id) {
       },
     ];
     const item = productsList.filter((item) => item.id === parseInt(id));
-    
-      resolve(item[0]);
-    
+
+    resolve(item[0]);
   });
   return myPromise;
 }
