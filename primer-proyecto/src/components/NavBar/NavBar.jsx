@@ -8,7 +8,7 @@ function NavBar(props) {
   return (
     <div className="nav-container estilo">
       <Link to="/">
-        <img className="estilo" src={GNR} alt="Logo Gnr" />
+        <img className="estilo" src={process.env.PUBLIC_URL + GNR} alt="Logo Gnr" />
       </Link>
       <ul className="nav">
         <li>
